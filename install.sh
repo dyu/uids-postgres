@@ -26,4 +26,4 @@ if [ "$UNAME" = 'Darwin' ]; then
 fi
 
 LD_LIBRARY_PATH='/opt/target/openssl/lib' cargo pgrx \
-package -c /opt/target/pgsql/bin/pg_config
+install --release -c /opt/target/pgsql/bin/pg_config

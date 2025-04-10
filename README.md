@@ -164,6 +164,26 @@ You can also download relevant files from [releases](https://github.com/spa5k/ui
 
 Refer to the included [Dockerfile](./docker/Dockerfile) for the installation template.
 
+## Install extension
+```sh
+./install.sh
+```
+
+## Start pg
+```sh
+./epg.sh
+```
+
+## Initialize extension
+```sh
+echo 'CREATE EXTENSION IF NOT EXISTS uids;' | ./psql.sh -f -
+```
+
+## Test extension
+```sh
+echo 'SELECT generate_uuidv7();' | ./psql.sh -f -
+```
+
 ## Usage
 
 ### Enable the Extension
