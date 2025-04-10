@@ -26,8 +26,8 @@ nanoid = "0.4.0"
 pgrx = "0.13.1"
 rusty_ulid = "2.0.0"
 svix-ksuid = "0.8.0"
-type-safe-id = "0.3.0"
-uuid = { version = "1.8.0", features = [
+type-safe-id = "0.3.2"
+uuid = { version = "1.16.0", features = [
     "v7",
     "v4",
     "v6",
