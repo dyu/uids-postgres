@@ -8,7 +8,7 @@ mod ulid;
 mod uuid_v6;
 mod uuidv7;
 
-use pgrx::prelude::*;
+// use pgrx::prelude::*;
 
 pgrx::pg_module_magic!();
 
