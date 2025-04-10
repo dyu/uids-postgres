@@ -5,21 +5,25 @@ edition = "2021"
 publish = false
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "lib"]
+
+[[bin]]
+name = "pgrx_embed_uids"
+path = "src/bin/pgrx_embed.rs"
 
 [features]
-default = ["pg16"]
-pg11 = ["pgrx/pg11", "pgrx-tests/pg11"]
+default = ["pg17"]
 pg12 = ["pgrx/pg12", "pgrx-tests/pg12"]
 pg13 = ["pgrx/pg13", "pgrx-tests/pg13"]
 pg14 = ["pgrx/pg14", "pgrx-tests/pg14"]
 pg15 = ["pgrx/pg15", "pgrx-tests/pg15"]
 pg16 = ["pgrx/pg16", "pgrx-tests/pg16"]
+pg17 = ["pgrx/pg17", "pgrx-tests/pg17"]
 pg_test = []
 
 [dependencies]
 nanoid = "0.4.0"
-pgrx = "=0.11.4"
+pgrx = "0.13.1"
 rusty_ulid = "2.0.0"
 svix-ksuid = "0.8.0"
 type-safe-id = "0.3.0"
@@ -37,7 +41,7 @@ timeflake-rs = "0.3.0"
 pushid = "0.0.1"
 
 [dev-dependencies]
-pgrx-tests = "=0.11.4"
+pgrx-tests = "0.13.1"
 
 [profile.dev]
 panic = "unwind"
